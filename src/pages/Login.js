@@ -1,14 +1,14 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import styled from 'styled-components';
-import loginImg from '../images/login-img.svg';
+import { AiOutlineGithub } from 'react-icons/ai';
 const Login = () => {
   const { loginWithRedirect } = useAuth0();
   return (
     <Wrapper>
       <div className="container">
-        <img src={loginImg} alt="github user" />
-        <h1>github user</h1>
+        <AiOutlineGithub classname="git" />
+        <h1>github data</h1>
         <button className="btn" onClick={loginWithRedirect}>
           login / sign up
         </button>
@@ -25,8 +25,10 @@ const Wrapper = styled.section`
     max-width: 600px;
     text-align: center;
   }
-  img {
-    margin-bottom: 2rem;
+  svg {
+    font-size: 20rem;
+    scale: 1;
+    z-index: -1;
   }
   h1 {
     margin-bottom: 1.5rem;

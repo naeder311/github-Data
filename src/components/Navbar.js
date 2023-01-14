@@ -5,7 +5,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 const Navbar = () => {
   const { loginWithRedirect, isAuthenticated, logout, user, isLoading } =
     useAuth0();
-
+  console.log(user);
   const isUser = isAuthenticated && user;
 
   return (
